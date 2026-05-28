@@ -1,0 +1,17 @@
+{
+  "name": "weather-posts-block",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@wordpress/scripts": "^32.3.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "weather-posts-block/main",
+    "version": "1.0.0",
+    "title": "Weather Posts Block",
+    "category": "widgets",
+    "description": "Displays 2 posts and a weather snippet.",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "postIds": {
+            "type": "array",
+            "default": []
+        },
+        "latitude": {
+            "type": "number",
+            "default": 0
+        },
+        "longitude": {
+            "type": "number",
+            "default": 0
+        },
+        "showTemperature": { "type": "boolean", "default": true },
+        "showFeelsLike":   { "type": "boolean", "default": true },
+        "showCondition":   { "type": "boolean", "default": true },
+        "showHumidity":    { "type": "boolean", "default": true },
+        "showPressure":    { "type": "boolean", "default": true },
+        "showWindSpeed":   { "type": "boolean", "default": true },
+        "showSunrise":     { "type": "boolean", "default": true },
+        "showSunset":      { "type": "boolean", "default": true },
+        "showLocation":    { "type": "boolean", "default": true }
+    },
+    "textdomain": "weather-posts-block",
+    "editorScript": "file:../build/index.js",
+    "style": "file:../build/style-index.css"
+}
