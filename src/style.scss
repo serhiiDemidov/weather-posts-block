@@ -23,7 +23,7 @@ $font: inherit;
     &__weather-panel {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         padding: clamp(20px, 3%, 40px) 0;
         background: #fff;
 
@@ -53,12 +53,22 @@ $font: inherit;
 
 // ── Weather widget ───────────────────────────────────────────────
 .wpb-weather {
-    &__icon {
+    &__icon-wrap {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: clamp(80px, 8vw, 120px);
-        height: auto;
+        height: clamp(80px, 8vw, 120px);
+        border-radius: 50%;
+        background: linear-gradient(135deg, #74b9e8 0%, #a8d4f5 100%);
+        margin-bottom: clamp(12px, 1.5vw, 20px);
+    }
+
+    &__icon {
+        width: 75%;
+        height: 75%;
         display: block;
-        margin-bottom: clamp(8px, 1vw, 16px);
-        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     }
 
     &__location {
@@ -140,7 +150,7 @@ $font: inherit;
         display: block;
         overflow: hidden;
         flex-shrink: 0;
-        aspect-ratio: 5 / 2;
+        aspect-ratio: 5 / 3;
     }
 
     &__image {

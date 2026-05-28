@@ -17,13 +17,15 @@ $second_post = $posts[1] ?? null;
         <?php if ( ! empty( $weather ) ) : ?>
 
             <?php if ( ! empty( $weather['icon'] ) ) : ?>
-                <img
-                    src="https://openweathermap.org/img/wn/<?php echo esc_attr( $weather['icon'] ); ?>@4x.png"
-                    alt="<?php echo esc_attr( ucfirst( $weather['condition'] ?? '' ) ); ?>"
-                    class="wpb-weather__icon"
-                    width="100"
-                    height="100"
-                />
+                <div class="wpb-weather__icon-wrap">
+                    <img
+                        src="https://openweathermap.org/img/wn/<?php echo esc_attr( $weather['icon'] ); ?>@4x.png"
+                        alt="<?php echo esc_attr( ucfirst( $weather['condition'] ?? '' ) ); ?>"
+                        class="wpb-weather__icon"
+                        width="100"
+                        height="100"
+                    />
+                </div>
             <?php endif; ?>
 
             <?php if ( ! empty( $attributes['showLocation'] ) && ! empty( $weather['location'] ) ) : ?>
