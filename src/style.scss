@@ -139,6 +139,16 @@ $font: inherit;
     }
 }
 
+// ── Editor preview notice ────────────────────────────────────────
+.wpb-editor-notice {
+    font-size: 13px;
+    color: $gray;
+    font-style: italic;
+    padding: 16px;
+    text-align: center;
+    margin: 0;
+}
+
 // ── Post cards ───────────────────────────────────────────────────
 .wpb-post-card {
     display: flex;

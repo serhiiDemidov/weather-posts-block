@@ -87,7 +87,6 @@ wp wpb clear-cache
 ```
 weather-posts-block/
 ├── build/                  # Compiled JS and CSS (committed for reviewers)
-├── design/                 # Figma reference screenshots and task description
 ├── inc/
 │   ├── Plugin.php          # Bootstraps all modules
 │   ├── Admin.php           # Settings page (API key storage)
