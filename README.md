@@ -136,9 +136,14 @@ npm run build
 
 - **PHP 8.0** — OOP architecture, PSR-4 autoloading via Composer
 - **WordPress Settings API** — admin configuration page
-- **WordPress Transients API** — weather response caching
+- **WordPress Transients API** — weather response caching (1 hour per coordinates pair)
 - **`wp_remote_get()`** — HTTP requests (no direct cURL)
-- **`WP_Query`** — post data fetching
+- **`WP_Query`** with `post__in` / `orderby: post__in` — post data fetching in user-defined order
+- **`get_block_wrapper_attributes()`** — alignment support (`wide`, `full`) via block supports API
+- **`wp_date()`** — timezone-aware sunrise/sunset formatting
 - **React / @wordpress/scripts** — Gutenberg editor UI
 - **`useSelect` / `@wordpress/core-data`** — native React editor preview via WordPress data stores
+- **`CheckboxControl`, `ToggleControl`, `InspectorControls`** — native `@wordpress/components` sidebar UI
+- **WP-CLI** — custom `wp wpb clear-cache` command
+- **CSS Grid** — two-column responsive layout (`2fr 1fr`)
 - **SCSS with `clamp()`** — fluid responsive typography and spacing
