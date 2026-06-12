@@ -4,6 +4,7 @@ import {
 	PanelBody,
 	TextControl,
 	ToggleControl,
+	CheckboxControl,
 	Spinner,
 	Placeholder,
 } from '@wordpress/components';
@@ -107,21 +108,16 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					{ searchResults === null && <Spinner /> }
 					{ ( searchResults || [] ).map( ( post ) => (
-						<div key={ post.id } style={ { marginBottom: '6px' } }>
-							<label>
-								<input
-									type="checkbox"
-									checked={ postIds.includes( post.id ) }
-									disabled={
-										! postIds.includes( post.id ) &&
-										postIds.length >= 2
-									}
-									onChange={ () => togglePost( post.id ) }
-									style={ { marginRight: '6px' } }
-								/>
-								{ post.title.rendered }
-							</label>
-						</div>
+						<CheckboxControl
+							key={ post.id }
+							label={ post.title.rendered }
+							checked={ postIds.includes( post.id ) }
+							disabled={
+								! postIds.includes( post.id ) &&
+								postIds.length >= 2
+							}
+							onChange={ () => togglePost( post.id ) }
+						/>
 					) ) }
 				</PanelBody>
 

@@ -49,7 +49,7 @@ A custom WordPress Gutenberg block that displays two selected posts alongside a 
    - **Weather Fields** — toggle visibility of individual weather fields
 4. Publish the page
 
-The block renders server-side, so the editor shows a live preview of the actual output.
+The block renders server-side on the frontend. The editor shows a native React preview with live post data fetched from the WordPress data store.
 
 ---
 
@@ -97,7 +97,7 @@ weather-posts-block/
 ├── src/
 │   ├── block.json          # Block metadata and attribute definitions
 │   ├── index.js            # Block entry point
-│   ├── edit.js             # React editor component (InspectorControls + ServerSideRender)
+│   ├── edit.js             # React editor component (InspectorControls + native React preview)
 │   ├── save.js             # Returns null — dynamic block, rendered by PHP
 │   └── style.scss          # Frontend and editor styles
 ├── templates/
@@ -140,5 +140,5 @@ npm run build
 - **`wp_remote_get()`** — HTTP requests (no direct cURL)
 - **`WP_Query`** — post data fetching
 - **React / @wordpress/scripts** — Gutenberg editor UI
-- **`ServerSideRender`** — live editor preview matching frontend output
+- **`useSelect` / `@wordpress/core-data`** — native React editor preview via WordPress data stores
 - **SCSS with `clamp()`** — fluid responsive typography and spacing

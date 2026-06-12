@@ -8,8 +8,8 @@
     "lint:js": "wp-scripts lint-js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Serhii Demidov",
+  "license": "GPL-2.0-or-later",
   "description": "",
   "devDependencies": {
     "@wordpress/scripts": "^32.3.0"

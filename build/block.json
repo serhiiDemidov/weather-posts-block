@@ -16,6 +16,9 @@
   "attributes": {
     "postIds": {
       "type": "array",
+      "items": {
+        "type": "integer"
+      },
       "default": []
     },
     "latitude": {
